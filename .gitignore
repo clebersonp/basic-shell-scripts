@@ -8,3 +8,6 @@ awk-colon.txt
 #sed_test.sh
 some-text.txt
 some-text.txt.ORIGINAL
+
+#basic vim
+basic-vim/*.swp
