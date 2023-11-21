@@ -10,4 +10,4 @@ some-text.txt
 some-text.txt.ORIGINAL
 
 #basic vim
-**/*.swp
+**/.*.swp
