@@ -1,0 +1,132 @@
+Basic keys operations in Vim:  https://www.youtube.com/watch?v=RZ4p-saaQkc, https://learnvim.irian.to/
+
+
+* There are three modes:
+	1 - Normal Mode;
+	2 - Insert Mode;
+	3 - Visual Mode;
+* Ensure you're in the Normal Mode always you need to type a commad (:). (to return to Normal Mode from any other mode, just type [ESC]).
+
+* Create a new file and open it with vim or just open an existing file:
+	- $ vi my_new_file.txt (and press enter)
+
+* To close the file without saving it.
+	- Ensure that file has no changes.
+	- :q (and press enter)
+
+* Two ways to close the file without saving it ignoring changes.
+	- :q! (and press enter, will discard all changes)
+	- ZZ (normal mode)
+
+* To write and close the file to save the changes.
+	- :wq (and press enter)
+
+* To write the file without closing it.
+	- :w (and press enter)
+
+* To undo changes:
+	- u (normal mode)
+
+* To redo changes:
+    - Ctrl + R (normal mode)
+
+* Some keys to enter into Insert Mode:
+	- i (to insert text before the cursor)
+	- a (to insert - append text after cursor)
+	- o (open a new line below the current one)
+	- I (to insert text at the begining the current line)
+	- A (to insert text at the end of the current line)
+	- O (open a new line above the current one)
+
+* Delete:
+	- dd (the current line, delete line too copy the value)
+    - D (all after the cursor)
+
+* Delete the current character:
+	- x
+
+* Copy the entire current line:
+	- yy or Y
+
+* Paste:
+	- p (paste (copy of entire line with yy) below current line - Or paste after the cursor (copy with Visual mode y(Yank)) 
+    - P (paste a(copy of entire line with yy) bove current line - Or paste before the cursor (copy with Visual mode y(Yank))
+
+* Replace:
+	- rn ('r' is the command, it will change the current character for the letter 'n', the removed character will be copied to the clipboard)
+    - R (replace more than one character, until ESC is pressed)
+
+* Every key can be combined with number:
+	- 5h (move 5 spaces to the left)
+	- 2x (delete 2 characters)
+	- 10dd (delete 10 lines)
+    - d2w (delete two forword words)
+
+* Change configuration in the current bash:
+	- :set number (shows the line number)
+	- :set relativenumber (shows relative number of lines)
+
+* Change the current line:
+    - cc (like dd but will activate insert mode)
+    - C (change/delete the rest of the line)
+
+* Navigation:
+	- Using arrow keys:
+	- Using keys in normal mode: h, j, k, l -> left, down, up and right respectively
+	- gg (Go to the first line of the file)
+	- G ( Go to the last line of the file) 
+	- :10 (Go to the line 10) - or 31G
+    - 0 (Begining of current line)
+    - $ (end of current line)
+    - % (move to matching parenthesis, bracket and brace)
+    - w (jump forward words)
+    - W (jump forward words separated by spaces)
+    - b (jump backward words)
+    - B (jump backward words separated by spaces)
+    - e (jump forward to the last letter of word)
+    - t* (jump forward next to the character * or any other)
+    - T* (jump backward next to the specified character)
+    - f* (jump forward to position of character * or any other)
+    - F* (jump forward to position of the specified character)
+    - >> (indent to the right, in Visual mode just press > once)
+    - << (indent to the left, in Visual mode just press < once)
+    - == (auto indent the line)
+    - = (auto indent the select block in visual mode)
+    - ma (mark/save a endpoint - the letter a is whatever you want)
+    - 'a (to navigate to saved endpoint - the letter a is whatever you want)
+    - zz (to center the cursor wherever it is)
+
+
+* Delete words:
+    - dw (delete the remaining of the selected word)
+    - diw (delete in one word)
+    - ciw (delete in one word and change to insert mode)
+    - ci" (change/delete everything in quotes)
+
+
+* Visual Mode:
+    - v (normal visual mode, can select pieces of texts)
+    - V (Visual Line, can select lines)
+    - Ctrl + v (Visual block, can select lines like column blocks)
+    - ESC ESC (to exit visual mode)
+
+
+* Search (press n to the next word, press N to the previous word):
+    - /word (/ is to activate the search and word is the work that will be search)
+    - ?word (? is to activate the search and word is the work that will be search, inverting the n and N flow)
+    - # (put the cursor over a word or token and then press # to search backward or * for forward)
+    - :nohlsearch (to clean the highlight search, or just :noh)
+    - :%s/someWord/toAnother/g (substitute the word 'someWord' and replace it for 'toAnother'. % - all file; s/ - substitute; /g globaly)
+    - :s/someWord/toAnother/g (the same the above, but only change what was selected by Vision Mode)
+
+* Repeat the last command:
+        - . (will repeat the last command)
+
+
+* Register:
+    - :reg (to show the last commands)
+    - "7p (the number is the register name and p is the paste command)
+    - "7yy (the number is the register name and yy is the yank(copy) line command to substitute the register number 7)
+    - Ctrl-R a (paste the 'a' name register into the cursor in the Insert mode)
+    - qa (record a macro, q to stop, a is the macro name, can be whetever you want)
+    - @a (execute the saved macro)
