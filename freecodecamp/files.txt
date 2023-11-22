@@ -1,0 +1,9 @@
+README.md
+files.txt
+greeting.sh
+input.txt
+output.txt
+output_and_redirect_to_file.sh
+read_lines_file.sh
+run_all.sh
+show-types-shells.sh
