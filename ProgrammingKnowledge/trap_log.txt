@@ -1,0 +1,17 @@
+Exit. signal is detected
+Exit. signal is detected
+Exit. signal is detected
+Exit. signal is detected
+Exit. signal is detected
+Exit. signal is detected
+Exit pid 18943 from ./trap_example.sh. signal is detected
+Exit pid 18943 from ./trap_example.sh. signal is detected
+Exit pid 18943 from ./trap_example.sh. signal is detected
+Exit pid 18943 from ./trap_example.sh. signal is detected
+Exit pid 18943 from ./trap_example.sh. signal is detected
+Exit pid 18943 from ./trap_example.sh. signal is detected
+Exit pid 18943 from ./trap_example.sh. signal is detected
+Exit pid 18943 from ./trap_example.sh. signal is detected
+Exit pid 18943 from ./trap_example.sh. signal is detected
+Exit pid 18943 from ./trap_example.sh. signal is detected
+Exit pid 18943 from ./trap_example.sh. signal is detected
